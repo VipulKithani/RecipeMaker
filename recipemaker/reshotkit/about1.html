@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>PHP Live MySQL Database Search</title>
+<style type="text/css">
+    body{
+        font-family: Arail, sans-serif;
+    }
+    /* Formatting search box */
+    .search-box{
+        width: 300px;
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+		margin-top:8%;
+		width:100%;
+		
+    }
+    .search-box input[type="text"]{
+        height: 32px;
+        padding: 5px 10px;
+        border: 1px solid #CCCCCC;
+        font-size: 14px;
+    }
+    .result{
+        position: absolute;        
+        z-index: 999;
+        top: 100%;
+        left: 0;
+    }
+    .search-box input[type="text"], .result{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* Formatting result items */
+    .result p{
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid #CCCCCC;
+        border-top: none;
+        cursor: pointer;
+    }
+    .result p:hover{
+        background: #f2f2f2;
+    }
+</style>
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">RecipeMaker</a>
+    </div>
+    <ul class="nav navbar-nav navbar-center"  >
+      <li><a href="HotkitRes.php">Home</a></li>
+      <li><a href="page1.php">Ingredients</a></li>
+      <li><a href="recipe.php">Add Recipe</a></li>
+	  <li><a href="search-form.php">search dishes</a></li>
+	  <li><a href="about1.html">About</a></li>
+      
+    </ul>
+	<ul class="nav navbar-nav navbar-right"  >
+      <li><a href="signup.php">signup</a></li>
+      <li><a href="login.php">login</a></li>
+	  <li><a href="logout.php">logout</a></li>
+     
+      
+    </ul>
+  </div>
+</nav>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+</head>
+<body>
+    
+	<div style="margin-top:100px;text-align:center;">
+	<h1><b>About Us</b></h1>
+	
+	<div style="font-size:20px;font-family:Times new roman;margin-top:100px">
+    Founded by Vipul Kithani Mayur Lund, Karan Hotwani.
+	RecipeMaker.com was developed with two primary objectives in mind.
+	First, as a R&D test-bed and development platform to explore, develop, implement and test new technologies 
+	manipulating large amounts of information in this case recipes.
+	Second, as a simple method for the creator to utilize the ingredients found in the kitchen cupboards.
+	Rather than pick a recipe then have to wander out searching to buy the ingredients he wanted to answer
+	"I have these ingredients; what can I make?"
+	<br><br>
+We are constantly exploring and improving the content of the web site dedicated to
+improving the experience of each and every visitor.<br>
+Feel free to contact us and let us know what you would like to see featured on the web site. <br>
+Unlike other corporate run recipe web sites,
+when you contact us your email is directly received and responded to personally.
+<br>
+<b>Contact:<br>
+Vipul:7387653363.<br>
+Karan:9960497094.<br>
+Mayur:8446109744.<br>
+Email:recipemaker@gmail.com
+</b>
+	</div>
+	
+	</div>
+</body>
+</html>
+
+

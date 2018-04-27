@@ -1,0 +1,58 @@
+
+<?php
+	$servername="LocalHost";
+	$username="root";
+	$password="";
+	$dbname="recipe";
+	
+	$conn=new mysqli($servername,$username,$password,$dbname);
+	if($conn->connect_error)
+	{
+		die("connection failed".$conn->connect_error);
+	}
+	else 
+		echo "<h1><center>connected database successfully </center></h1>";
+    //Create the query
+    
+	$sql = "SELECT ingredients FROM recipe";
+	//$result = $conn->query($sql);
+
+    //Run the query
+    $query_resource = mysqli_query($conn,$sql);
+
+    //Iterate over the results that you've gotten from the database (hopefully MySQL)
+    //while( $recipe = mysqli_fetch_assoc($query_resource) ):
+	if ($query_resource ->num_rows > 0) {
+    // output data of each row
+    while($row = $query_resource->fetch_assoc()) {
+		$ingredient=explode(',',$row['ingredients']);
+		
+			foreach($ingredient as $out){
+				$abc[] = $out;
+                ?>
+				
+			 
+	
+<?php
+    }
+	}
+	}
+	//print_r($abc);
+	
+?>
+<form action="Recipecomma.php" method="post">
+<?php
+foreach ($abc as $stud) {
+
+    echo "<br/><input type='checkbox' name=\"abc[]\" value='$stud' />$stud<br>";
+}?>
+<input type="submit" name="submit" Value="Submit"/>
+
+<!----- Including PHP Script ----->
+<?php include 'checkbox_value.php';?>
+
+</form>
+
+<?php
+
+?>
